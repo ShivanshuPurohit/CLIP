@@ -83,12 +83,15 @@ def _transform(n_px):
 
 
 def available_models() -> List[str]:
-    """Returns the names of available CLIP models"""
+    """
+    Returns the names of available CLIP models
+    """
     return list(_MODELS.keys())
 
 
 def load(name: str, device: Union[str, torch.device] = "cuda" if torch.cuda.is_available() else "cpu", jit: bool = False, download_root: str = None):
-    """Load a CLIP model
+    """
+    Load a CLIP model
     Parameters
     ----------
     name : str
